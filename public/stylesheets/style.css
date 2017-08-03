@@ -62,7 +62,7 @@ a {
 }
 
 body {
-    background-image: url("../images/0921sunrail.JPG");
+    background-image: url("../images/background_couple.jpg");
     background-size: cover;
 }
 
@@ -168,7 +168,7 @@ th {
 }
 
 .panel-transparent {
-    background: rgba(244, 158, 66, .95);
+    background: rgba(128, 172, 242, .85);
     position: relative;
 }
 

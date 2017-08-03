@@ -82,10 +82,10 @@ $(document).ready(function () {
      */
     function calcNextArrival(firstTrainDateTime, intervalMin) {
 
-        console.log('---- calNextArrival function')
+        console.log('---- calNextArrival function');
         //How long ago
         console.log(firstTrainDateTime);
-        var startDateTime = moment(firstTrainDateTime, "YYYY-MM-DDThh:mm A")
+        var startDateTime = moment(firstTrainDateTime, "YYYY-MM-DDThh:mm A");
         console.log(startDateTime);
         var minSinceStart = moment(startDateTime).diff(moment(), "minutes");
         console.log('Moment Date Difference ' + minSinceStart);
@@ -118,7 +118,7 @@ $(document).ready(function () {
             firstTrainDateTime: $('#firstTrainDateTime').val(),
             schedInterval: $('#schedInterval').val().trim(),
             entryDate: Date.now()
-        }
+        };
 
         //get a unique key
         // Get a key for a new Post.
