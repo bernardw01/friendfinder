@@ -57,6 +57,12 @@ button {
     margin: 5px;
 }
 
+label {
+    font-size: x-large;
+    font-weight: bold;
+    color: #122b40;
+}
+
 a {
     text-decoration: none;
 }
@@ -191,7 +197,7 @@ th {
 }
 
 .panel-transparent {
-    background: rgba(128, 172, 242, .85);
+    background: rgba(255, 255, 255, .85);
     position: relative;
 }
 

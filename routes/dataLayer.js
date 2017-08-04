@@ -22,39 +22,8 @@ var DataLayer = function () {
     });
     var connection = this.connection;
 
-    /**
-     * This function returns an array of orders and their associated items
-     *
-     */
-    this.getOrders = function () {
-        this.connection.query("SELECT * FROM products", function (err, res) {
-            if (err) throw err;
-            console.log(res);
-        });
-    };
 
-    /**
-     * This function submits an order
-     *
-     */
-    this.addNewOrder = function (order) {
 
-        orderHeader.order_date = order.order_date;
-        orderHeader.customer_name = order.customer_name;
-        orderHeader.order_status = 'new';
-        orderHeader.total_value = order.total_value;
-
-        this.connection
-            .query('INSERT INTO orders SET ?', orderHeader,
-                function (error, results, fields) {
-                    if (error) throw error;
-                    orderID = results.insertId;
-                    console.log(results.insertId);
-                    console.log("Order added");
-                    addOrderItems(order.orderItems);
-
-                });
-    };
 
     // var addOrderItems = function (orderItems) {
     //     //TODO Get the product price to use to calculate the value of the order line item.
