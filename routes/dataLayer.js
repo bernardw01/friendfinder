@@ -25,33 +25,6 @@ var DataLayer = function () {
 
 
 
-    // var addOrderItems = function (orderItems) {
-    //     //TODO Get the product price to use to calculate the value of the order line item.
-    //
-    //     //Loop through each item on the order object and submit it.
-    //     for (var i = 0; i < orderItems.length; i++) {
-    //         var item = orderItems[i];
-    //         var orderItem = {};
-    //         orderItem.order_id = orderID;
-    //         orderItem.qty = item.qty;
-    //         orderItem.remarks = item.remarks;
-    //         orderItem.product_id = item.prodID;
-    //         console.log(JSON.stringify(orderItem, null, 2));
-    //         connection
-    //             .query('INSERT INTO order_items SET ?', orderItem,
-    //                 function (error, results, fields) {
-    //                     if (error) throw error;
-    //                     console.log(results.insertId);
-    //                     console.log("Order items added");
-    //                 });
-    //     };
-    //
-    // }
-
-    /**
-     * This function returns an array of items matching the requested department name
-     *
-     */
     this.getMatches = function (searchObj, callback) {
         this.connection.query({
                 sql: "SELECT * FROM people where useflag = 1 and gender = ?",
