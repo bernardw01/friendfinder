@@ -55,7 +55,7 @@ $(document).ready(function () {
 
                 //sort the matches array
                 matches.sort(function(a,b){
-                    return parseInt(a.compatability) - parseInt(b.compatability);
+                    return parseInt(b.compatability) - parseInt(a.compatability);
                 });
 
                 //Once the document is loaded check the config file and add a media object for each player in the config file
@@ -89,7 +89,7 @@ $(document).ready(function () {
                     newMediaHeading.append(hpLabel);
 
                     var newMediaText = $("<p>");
-                    newMediaText.text("City: " + matches[index].city + " Compatibility Ranking: " + matches[i].rank + "%");
+                    newMediaText.html("City: " + matches[index].city + " <br/>Compatibility Ranking: " + matches[index].rank + "%");
 
                     newMediaLeft.append(newMediaImage);
                     newMediaBody.append(newMediaHeading);
